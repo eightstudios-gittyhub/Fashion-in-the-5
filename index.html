@@ -164,8 +164,21 @@
     .bamboo-svg {
       position: absolute;
       top: 0;
+      width: 130px;
       height: 100%;
-      opacity: 0.1;
+      opacity: 0.7;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .footer-bamboo-svg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 340px;
+      opacity: 0.25;
+      mix-blend-mode: screen;
       pointer-events: none;
     }
 
@@ -850,6 +863,8 @@
       .who-grid { grid-template-columns: 1fr 1fr; }
       .hero-btns { flex-direction: column; align-items: center; }
       .btn-primary, .btn-ghost { width: 100%; max-width: 280px; text-align: center; }
+      .bamboo-svg { width: 92px; opacity: 0.45; }
+      .footer-bamboo-svg { height: 220px; opacity: 0.2; }
     }
 
     @media (max-width: 480px) {
@@ -1066,6 +1081,26 @@
   </section>
 
   <footer>
+    <svg class="footer-bamboo-svg" viewBox="0 0 1600 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <defs>
+        <filter id="footerInkBleed" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.035 0.16" numOctaves="3" seed="5" />
+          <feDisplacementMap in="SourceGraphic" scale="3" />
+        </filter>
+        <linearGradient id="footerMist" x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0" stop-color="rgba(192,0,26,0)" />
+          <stop offset="0.5" stop-color="rgba(192,0,26,0.45)" />
+          <stop offset="1" stop-color="rgba(192,0,26,0)" />
+        </linearGradient>
+      </defs>
+      <g filter="url(#footerInkBleed)" fill="none" stroke="#c0001a" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M120 410 C110 300 112 160 130 -20 M270 410 C255 280 265 120 285 -30 M460 410 C450 250 462 120 485 -30 M650 410 C635 255 645 120 670 -30 M850 410 C830 250 845 120 865 -30 M1060 410 C1045 260 1058 120 1085 -30 M1280 410 C1270 255 1280 125 1300 -30 M1470 410 C1455 260 1468 120 1495 -30" stroke-width="13" opacity="0.7" />
+        <path d="M40 318 C250 260 445 292 650 238 S1030 218 1260 258 S1510 282 1630 218" stroke-width="5" opacity="0.33" />
+        <path d="M0 345 C220 325 390 370 610 325 S1010 310 1230 342 S1480 370 1600 332" stroke="url(#footerMist)" stroke-width="38" opacity="0.45" />
+        <path d="M130 80 Q205 52 250 22 M130 148 Q72 126 35 88 M285 135 Q360 98 400 62 M285 226 Q218 198 172 158 M485 92 Q560 62 602 25 M485 190 Q418 165 372 125 M670 118 Q735 88 780 52 M670 238 Q610 212 560 174 M865 96 Q935 68 975 35 M865 205 Q795 178 750 140 M1085 128 Q1155 96 1200 58 M1085 248 Q1018 218 970 178 M1300 108 Q1372 78 1420 42 M1300 218 Q1235 192 1188 152 M1495 145 Q1558 116 1608 78" stroke-width="10" opacity="0.78" />
+        <path d="M250 22 Q218 24 202 42 M250 22 Q226 8 204 -10 M35 88 Q66 88 88 104 M35 88 Q55 66 72 48 M400 62 Q366 66 348 86 M400 62 Q370 45 348 24 M172 158 Q205 160 224 178 M172 158 Q196 136 210 116 M602 25 Q568 28 545 50 M602 25 Q575 6 548 -8 M372 125 Q408 130 430 148 M372 125 Q392 102 415 82 M780 52 Q748 55 725 78 M780 52 Q752 36 730 16 M560 174 Q595 176 618 194 M560 174 Q582 150 604 130 M975 35 Q940 40 918 62 M975 35 Q946 18 922 0 M750 140 Q785 143 808 162 M750 140 Q775 116 798 94 M1200 58 Q1165 62 1142 84 M1200 58 Q1170 40 1145 20 M970 178 Q1006 180 1030 198 M970 178 Q992 154 1015 134 M1420 42 Q1385 48 1360 70 M1420 42 Q1390 25 1365 5 M1188 152 Q1225 155 1248 174 M1188 152 Q1210 128 1235 108 M1608 78 Q1575 80 1550 102 M1608 78 Q1580 58 1555 40" stroke-width="6" opacity="0.62" />
+      </g>
+    </svg>
     <svg class="footer-dragon" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <g fill="none" stroke="#c0001a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6">
         <path d="M50 250 Q150 200 250 170 Q350 140 450 110 Q550 80 650 50 Q700 35 750 20" /><path d="M55 255 Q155 205 255 175 Q355 145 455 115 Q555 85 655 55 Q705 40 752 25" /><path d="M50 250 Q20 240 10 255 Q5 240 15 232 Q8 220 20 225 Q28 215 38 228 Q42 238 50 250Z" /><circle cx="18" cy="240" r="2" fill="#c0001a" stroke="none" /><path d="M752 25 Q780 15 790 25 Q795 12 786 5 Q795 8 793 18 Q800 12 798 22 Q790 28 780 24 Q772 32 760 30 Q755 28 752 25Z" /><circle cx="782" cy="18" r="2" fill="#c0001a" stroke="none" />
