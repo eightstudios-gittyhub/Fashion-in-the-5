@@ -15,6 +15,10 @@
       --red: #c0001a;
       --red-bright: #e8001f;
       --red-glow: rgba(192, 0, 26, 0.35);
+      --bamboo-green: #2f4a1d;
+      --bamboo-green-light: #5f7f35;
+      --bamboo-green-dark: #14230f;
+      --bamboo-ink: rgba(12, 18, 8, 0.72);
       --white: #f0ede8;
       --gray: #9a9490;
       --gray-light: #c8c4be;
@@ -166,7 +170,7 @@
       top: 0;
       width: 130px;
       height: 100%;
-      opacity: 0.7;
+      opacity: 0.5;
       mix-blend-mode: screen;
       pointer-events: none;
     }
@@ -177,7 +181,7 @@
       left: 0;
       width: 100%;
       height: 340px;
-      opacity: 0.25;
+      opacity: 0.18;
       mix-blend-mode: screen;
       pointer-events: none;
     }
@@ -873,7 +877,7 @@
       .hero-btns { flex-direction: column; align-items: center; }
       .btn-primary, .btn-ghost { width: 100%; max-width: 280px; text-align: center; }
       .bamboo-svg { width: 92px; opacity: 0.45; }
-      .footer-bamboo-svg { height: 220px; opacity: 0.2; }
+      .footer-bamboo-svg { height: 220px; opacity: 0.16; }
     }
 
     @media (max-width: 480px) {
@@ -897,43 +901,43 @@
 
   <section id="hero">
     <svg class="bamboo-svg" style="left: 0;" viewBox="0 0 80 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <g stroke="#c0001a" stroke-width="1.5" fill="none" stroke-linecap="round">
-        <line x1="20" y1="0" x2="20" y2="900" />
-        <line x1="20" y1="80" x2="20" y2="100" /><rect x="14" y="100" width="12" height="6" rx="1" fill="rgba(192,0,26,0.3)" stroke="none" />
-        <line x1="20" y1="200" x2="20" y2="220" /><rect x="14" y="220" width="12" height="6" rx="1" fill="rgba(192,0,26,0.3)" stroke="none" />
-        <line x1="20" y1="340" x2="20" y2="360" /><rect x="14" y="360" width="12" height="6" rx="1" fill="rgba(192,0,26,0.3)" stroke="none" />
-        <line x1="20" y1="480" x2="20" y2="500" /><rect x="14" y="500" width="12" height="6" rx="1" fill="rgba(192,0,26,0.3)" stroke="none" />
-        <line x1="20" y1="620" x2="20" y2="640" /><rect x="14" y="640" width="12" height="6" rx="1" fill="rgba(192,0,26,0.3)" stroke="none" />
-        <line x1="20" y1="760" x2="20" y2="780" /><rect x="14" y="780" width="12" height="6" rx="1" fill="rgba(192,0,26,0.3)" stroke="none" />
+      <g stroke="var(--bamboo-green-light)" stroke-width="1.45" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="0" x2="20" y2="900" stroke-width="1.8" />
+        <line x1="20" y1="80" x2="20" y2="100" /><rect x="14" y="100" width="12" height="6" rx="1" fill="rgba(95,127,53,0.34)" stroke="none" />
+        <line x1="20" y1="200" x2="20" y2="220" /><rect x="14" y="220" width="12" height="6" rx="1" fill="rgba(95,127,53,0.34)" stroke="none" />
+        <line x1="20" y1="340" x2="20" y2="360" /><rect x="14" y="360" width="12" height="6" rx="1" fill="rgba(95,127,53,0.34)" stroke="none" />
+        <line x1="20" y1="480" x2="20" y2="500" /><rect x="14" y="500" width="12" height="6" rx="1" fill="rgba(95,127,53,0.34)" stroke="none" />
+        <line x1="20" y1="620" x2="20" y2="640" /><rect x="14" y="640" width="12" height="6" rx="1" fill="rgba(95,127,53,0.34)" stroke="none" />
+        <line x1="20" y1="760" x2="20" y2="780" /><rect x="14" y="780" width="12" height="6" rx="1" fill="rgba(95,127,53,0.34)" stroke="none" />
         <path d="M20 130 Q45 110 60 85" />
         <path d="M20 250 Q-5 230 -15 205" />
         <path d="M20 380 Q48 355 62 330" />
         <path d="M20 520 Q-8 500 -18 475" />
         <path d="M20 660 Q46 640 58 615" />
-        <line x1="45" y1="150" x2="45" y2="900" />
-        <rect x="39" y="290" width="12" height="6" rx="1" fill="rgba(192,0,26,0.25)" stroke="none" />
-        <rect x="39" y="440" width="12" height="6" rx="1" fill="rgba(192,0,26,0.25)" stroke="none" />
-        <rect x="39" y="590" width="12" height="6" rx="1" fill="rgba(192,0,26,0.25)" stroke="none" />
+        <line x1="45" y1="150" x2="45" y2="900" stroke-width="1.25" />
+        <rect x="39" y="290" width="12" height="6" rx="1" fill="rgba(95,127,53,0.26)" stroke="none" />
+        <rect x="39" y="440" width="12" height="6" rx="1" fill="rgba(95,127,53,0.26)" stroke="none" />
+        <rect x="39" y="590" width="12" height="6" rx="1" fill="rgba(95,127,53,0.26)" stroke="none" />
         <path d="M45 310 Q70 290 80 265" />
         <path d="M45 460 Q18 440 8 415" />
       </g>
     </svg>
 
     <svg class="bamboo-svg" style="right: 0; transform: scaleX(-1);" viewBox="0 0 80 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <g stroke="#c0001a" stroke-width="1.5" fill="none" stroke-linecap="round">
-        <line x1="20" y1="0" x2="20" y2="900" />
-        <rect x="14" y="100" width="12" height="6" rx="1" fill="rgba(192,0,26,0.3)" stroke="none" />
-        <rect x="14" y="250" width="12" height="6" rx="1" fill="rgba(192,0,26,0.3)" stroke="none" />
-        <rect x="14" y="400" width="12" height="6" rx="1" fill="rgba(192,0,26,0.3)" stroke="none" />
-        <rect x="14" y="550" width="12" height="6" rx="1" fill="rgba(192,0,26,0.3)" stroke="none" />
-        <rect x="14" y="700" width="12" height="6" rx="1" fill="rgba(192,0,26,0.3)" stroke="none" />
+      <g stroke="var(--bamboo-green-light)" stroke-width="1.45" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="0" x2="20" y2="900" stroke-width="1.8" />
+        <rect x="14" y="100" width="12" height="6" rx="1" fill="rgba(95,127,53,0.34)" stroke="none" />
+        <rect x="14" y="250" width="12" height="6" rx="1" fill="rgba(95,127,53,0.34)" stroke="none" />
+        <rect x="14" y="400" width="12" height="6" rx="1" fill="rgba(95,127,53,0.34)" stroke="none" />
+        <rect x="14" y="550" width="12" height="6" rx="1" fill="rgba(95,127,53,0.34)" stroke="none" />
+        <rect x="14" y="700" width="12" height="6" rx="1" fill="rgba(95,127,53,0.34)" stroke="none" />
         <path d="M20 120 Q48 100 62 78" />
         <path d="M20 270 Q-6 250 -16 228" />
         <path d="M20 420 Q48 400 60 378" />
         <path d="M20 570 Q-5 550 -14 528" />
-        <line x1="50" y1="200" x2="50" y2="900" />
-        <rect x="44" y="340" width="12" height="6" rx="1" fill="rgba(192,0,26,0.25)" stroke="none" />
-        <rect x="44" y="490" width="12" height="6" rx="1" fill="rgba(192,0,26,0.25)" stroke="none" />
+        <line x1="50" y1="200" x2="50" y2="900" stroke-width="1.25" />
+        <rect x="44" y="340" width="12" height="6" rx="1" fill="rgba(95,127,53,0.26)" stroke="none" />
+        <rect x="44" y="490" width="12" height="6" rx="1" fill="rgba(95,127,53,0.26)" stroke="none" />
         <path d="M50 360 Q74 340 82 318" />
         <path d="M50 510 Q24 490 14 468" />
       </g>
@@ -1106,12 +1110,12 @@
           <feDisplacementMap in="SourceGraphic" scale="3" />
         </filter>
         <linearGradient id="footerMist" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0" stop-color="rgba(192,0,26,0)" />
-          <stop offset="0.5" stop-color="rgba(192,0,26,0.45)" />
-          <stop offset="1" stop-color="rgba(192,0,26,0)" />
+          <stop offset="0" stop-color="rgba(47,74,29,0)" />
+          <stop offset="0.5" stop-color="rgba(47,74,29,0.38)" />
+          <stop offset="1" stop-color="rgba(47,74,29,0)" />
         </linearGradient>
       </defs>
-      <g filter="url(#footerInkBleed)" fill="none" stroke="#c0001a" stroke-linecap="round" stroke-linejoin="round">
+      <g filter="url(#footerInkBleed)" fill="none" stroke="var(--bamboo-green)" stroke-linecap="round" stroke-linejoin="round">
         <path d="M120 410 C110 300 112 160 130 -20 M270 410 C255 280 265 120 285 -30 M460 410 C450 250 462 120 485 -30 M650 410 C635 255 645 120 670 -30 M850 410 C830 250 845 120 865 -30 M1060 410 C1045 260 1058 120 1085 -30 M1280 410 C1270 255 1280 125 1300 -30 M1470 410 C1455 260 1468 120 1495 -30" stroke-width="13" opacity="0.7" />
         <path d="M40 318 C250 260 445 292 650 238 S1030 218 1260 258 S1510 282 1630 218" stroke-width="5" opacity="0.33" />
         <path d="M0 345 C220 325 390 370 610 325 S1010 310 1230 342 S1480 370 1600 332" stroke="url(#footerMist)" stroke-width="38" opacity="0.45" />
@@ -1123,8 +1127,10 @@
       <g fill="none" stroke="#c0001a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6">
         <path d="M50 250 Q150 200 250 170 Q350 140 450 110 Q550 80 650 50 Q700 35 750 20" /><path d="M55 255 Q155 205 255 175 Q355 145 455 115 Q555 85 655 55 Q705 40 752 25" /><path d="M50 250 Q20 240 10 255 Q5 240 15 232 Q8 220 20 225 Q28 215 38 228 Q42 238 50 250Z" /><circle cx="18" cy="240" r="2" fill="#c0001a" stroke="none" /><path d="M752 25 Q780 15 790 25 Q795 12 786 5 Q795 8 793 18 Q800 12 798 22 Q790 28 780 24 Q772 32 760 30 Q755 28 752 25Z" /><circle cx="782" cy="18" r="2" fill="#c0001a" stroke="none" />
         <path d="M200 185 Q208 177 216 185 Q208 191 200 185Z" /><path d="M350 143 Q358 135 366 143 Q358 149 350 143Z" /><path d="M500 103 Q508 95 516 103 Q508 109 500 103Z" /><path d="M650 60 Q658 52 666 60 Q658 66 650 60Z" />
-        <line x1="30" y1="0" x2="30" y2="300" /><rect x="24" y="80" width="12" height="5" rx="1" fill="rgba(192,0,26,0.3)" stroke="none" /><rect x="24" y="160" width="12" height="5" rx="1" fill="rgba(192,0,26,0.3)" stroke="none" /><rect x="24" y="240" width="12" height="5" rx="1" fill="rgba(192,0,26,0.3)" stroke="none" /><path d="M30 95 Q55 78 68 58" /><path d="M30 175 Q8 158 -5 140" />
-        <line x1="770" y1="0" x2="770" y2="300" /><rect x="764" y="80" width="12" height="5" rx="1" fill="rgba(192,0,26,0.3)" stroke="none" /><rect x="764" y="180" width="12" height="5" rx="1" fill="rgba(192,0,26,0.3)" stroke="none" /><path d="M770 95 Q748 78 736 58" /><path d="M770 195 Q792 178 804 158" />
+      </g>
+      <g fill="none" stroke="var(--bamboo-green-light)" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" opacity="0.48">
+        <line x1="30" y1="0" x2="30" y2="300" stroke-width="1.7" /><rect x="24" y="80" width="12" height="5" rx="1" fill="rgba(95,127,53,0.34)" stroke="none" /><rect x="24" y="160" width="12" height="5" rx="1" fill="rgba(95,127,53,0.34)" stroke="none" /><rect x="24" y="240" width="12" height="5" rx="1" fill="rgba(95,127,53,0.34)" stroke="none" /><path d="M30 95 Q55 78 68 58" /><path d="M30 175 Q8 158 -5 140" />
+        <line x1="770" y1="0" x2="770" y2="300" stroke-width="1.7" /><rect x="764" y="80" width="12" height="5" rx="1" fill="rgba(95,127,53,0.34)" stroke="none" /><rect x="764" y="180" width="12" height="5" rx="1" fill="rgba(95,127,53,0.34)" stroke="none" /><path d="M770 95 Q748 78 736 58" /><path d="M770 195 Q792 178 804 158" />
       </g>
     </svg>
     <div class="footer-name">Fashion in the 5</div>
