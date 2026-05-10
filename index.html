@@ -710,8 +710,8 @@
       line-height: 1.6;
     }
 
-    .form-success { display: none; padding: 48px; text-align: center; }
-    .form-success.show { display: block; }
+    .form-status { display: none; padding: 48px; text-align: center; }
+    .form-status.show { display: block; }
 
     .success-icon {
       display: flex;
@@ -724,18 +724,27 @@
       border-radius: 50%;
     }
 
-    .form-success h3 {
+    .form-status h3 {
       margin-bottom: 12px;
       color: var(--red-bright);
       font-family: var(--font-display);
       font-size: 24px;
     }
 
-    .form-success p {
+    .form-status p {
       color: var(--gray);
       font-family: var(--font-body);
       font-size: 16px;
       font-style: italic;
+    }
+
+    .form-error h3 { color: var(--white); }
+    .form-error p a { color: var(--red-bright); }
+
+    .btn-submit:disabled {
+      cursor: wait;
+      opacity: 0.7;
+      transform: none;
     }
 
     footer {
@@ -1037,29 +1046,38 @@
       <h2 class="section-title">Submit Your <span>Application</span></h2>
       <p class="section-sub">Complete the form below to apply for a showcase slot or to reach our team directly.</p>
       <div class="form-wrap reveal">
-        <form id="appForm">
+        <form id="appForm" action="https://formsubmit.co/eight888studios@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Fashion in the 5 Application" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" id="replyTo" name="_replyto" value="" />
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none;" />
           <div class="form-grid">
-            <div class="form-field"><label for="fullName">Full Name</label><input type="text" id="fullName" name="fullName" placeholder="Your full name" required /></div>
-            <div class="form-field"><label for="brandName">Brand / Artist Name</label><input type="text" id="brandName" name="brandName" placeholder="Your brand or artist name" /></div>
+            <div class="form-field"><label for="fullName">Full Name</label><input type="text" id="fullName" name="Full Name" placeholder="Your full name" required /></div>
+            <div class="form-field"><label for="brandName">Brand / Artist Name</label><input type="text" id="brandName" name="Brand / Artist Name" placeholder="Your brand or artist name" /></div>
             <div class="form-field"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="your@email.com" required /></div>
-            <div class="form-field"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="(518) 000-0000" /></div>
-            <div class="form-field"><label for="instagram">Instagram</label><input type="text" id="instagram" name="instagram" placeholder="@yourhandle" /></div>
-            <div class="form-field"><label for="tiktok">TikTok</label><input type="text" id="tiktok" name="tiktok" placeholder="@yourhandle" /></div>
+            <div class="form-field"><label for="phone">Phone Number</label><input type="tel" id="phone" name="Phone Number" placeholder="(518) 000-0000" /></div>
+            <div class="form-field"><label for="instagram">Instagram</label><input type="text" id="instagram" name="Instagram" placeholder="@yourhandle" /></div>
+            <div class="form-field"><label for="tiktok">TikTok</label><input type="text" id="tiktok" name="TikTok" placeholder="@yourhandle" /></div>
             <div class="form-divider"></div>
-            <div class="form-field"><label for="applyAs">Applying As</label><select id="applyAs" name="applyAs" required><option value="" disabled selected>Select category</option><option value="designer">Fashion Designer</option><option value="brand">Clothing Brand</option><option value="model">Model</option><option value="photographer">Photographer / Videographer</option><option value="vendor">Vendor / Product Seller</option><option value="artist">Artist / Performer</option><option value="sponsor">Sponsor / Collaborator</option><option value="other">Other</option></select></div>
-            <div class="form-field"><label for="showcaseTime">Desired Showcase Time</label><select id="showcaseTime" name="showcaseTime"><option value="" disabled selected>Select duration</option><option value="5">5 Minutes</option><option value="10">10 Minutes</option><option value="15">15 Minutes</option></select></div>
-            <div class="form-field full"><label for="showcase">What Products or Work Will You Showcase?</label><textarea id="showcase" name="showcase" placeholder="Describe your collection, products, services, or performance..." rows="4"></textarea></div>
-            <div class="form-field"><label for="space">Do You Need a Table, Rack, or Floor Space?</label><select id="space" name="space"><option value="" disabled selected>Select space type</option><option value="table">Table</option><option value="rack">Clothing Rack</option><option value="floor">Floor Space</option><option value="multiple">Multiple / Combination</option><option value="none">No Additional Space Needed</option></select></div>
-            <div class="form-field"><label for="guests">How Many Guests Are You Bringing?</label><input type="number" id="guests" name="guests" min="0" max="20" placeholder="0" value="0" /></div>
-            <div class="form-field full"><label for="notes">Additional Questions or Notes</label><textarea id="notes" name="notes" placeholder="Any additional information, questions, or special requests..." rows="4"></textarea></div>
+            <div class="form-field"><label for="applyAs">Applying As</label><select id="applyAs" name="Applying As" required><option value="" disabled selected>Select category</option><option value="designer">Fashion Designer</option><option value="brand">Clothing Brand</option><option value="model">Model</option><option value="photographer">Photographer / Videographer</option><option value="vendor">Vendor / Product Seller</option><option value="artist">Artist / Performer</option><option value="sponsor">Sponsor / Collaborator</option><option value="other">Other</option></select></div>
+            <div class="form-field"><label for="showcaseTime">Desired Showcase Time</label><select id="showcaseTime" name="Desired Showcase Time"><option value="" disabled selected>Select duration</option><option value="5">5 Minutes</option><option value="10">10 Minutes</option><option value="15">15 Minutes</option></select></div>
+            <div class="form-field full"><label for="showcase">What Products or Work Will You Showcase?</label><textarea id="showcase" name="Showcase Details" placeholder="Describe your collection, products, services, or performance..." rows="4"></textarea></div>
+            <div class="form-field"><label for="space">Do You Need a Table, Rack, or Floor Space?</label><select id="space" name="Space Needed"><option value="" disabled selected>Select space type</option><option value="table">Table</option><option value="rack">Clothing Rack</option><option value="floor">Floor Space</option><option value="multiple">Multiple / Combination</option><option value="none">No Additional Space Needed</option></select></div>
+            <div class="form-field"><label for="guests">How Many Guests Are You Bringing?</label><input type="number" id="guests" name="Guest Count" min="0" max="20" placeholder="0" value="0" /></div>
+            <div class="form-field full"><label for="notes">Additional Questions or Notes</label><textarea id="notes" name="Additional Notes" placeholder="Any additional information, questions, or special requests..." rows="4"></textarea></div>
             <div class="form-note">By submitting this application you acknowledge that showcase spots are limited and subject to availability. Our team will follow up within 48–72 hours to confirm your spot and provide payment details.</div>
             <div class="form-submit-row"><button type="submit" class="btn-submit">Submit Application</button><p class="form-disclaimer">Submissions are reviewed in the order they are received.<br />Confirmation will be sent to your email.</p></div>
           </div>
         </form>
-        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+        <div class="form-status" id="formSuccess" role="status" aria-live="polite">
           <div class="success-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c0001a" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg></div>
           <h3>Application Received</h3>
-          <p>Thank you for applying to Fashion in the 5.<br />Our team will be in touch within 48–72 hours.</p>
+          <p>Thank you for applying to Fashion in the 5.<br />Your application has been sent to eight888studios@gmail.com.</p>
+        </div>
+        <div class="form-status form-error" id="formError" role="alert" aria-live="assertive">
+          <h3>Submission Could Not Be Sent</h3>
+          <p>Please try again, or email your application details directly to <a href="mailto:eight888studios@gmail.com">eight888studios@gmail.com</a>.</p>
         </div>
       </div>
     </div>
@@ -1114,17 +1132,45 @@
 
     revealEls.forEach((el) => revealObserver.observe(el));
 
-    document.getElementById('appForm').addEventListener('submit', (event) => {
+    document.getElementById('appForm').addEventListener('submit', async (event) => {
       event.preventDefault();
       const form = event.currentTarget;
+      const submitButton = form.querySelector('.btn-submit');
       const success = document.getElementById('formSuccess');
-      form.style.opacity = '0';
-      form.style.transform = 'translateY(-10px)';
-      form.style.transition = 'all 0.4s ease';
-      setTimeout(() => {
-        form.style.display = 'none';
-        success.classList.add('show');
-      }, 400);
+      const error = document.getElementById('formError');
+      const replyTo = document.getElementById('replyTo');
+      replyTo.value = form.email.value;
+      const formData = new FormData(form);
+
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+      error.classList.remove('show');
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/eight888studios@gmail.com', {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: formData,
+        });
+
+        if (!response.ok) throw new Error('Application submission failed.');
+
+        form.style.opacity = '0';
+        form.style.transform = 'translateY(-10px)';
+        form.style.transition = 'all 0.4s ease';
+        setTimeout(() => {
+          form.style.display = 'none';
+          success.classList.add('show');
+        }, 400);
+      } catch (submissionError) {
+        try {
+          HTMLFormElement.prototype.submit.call(form);
+        } catch (fallbackError) {
+          submitButton.disabled = false;
+          submitButton.textContent = 'Submit Application';
+          error.classList.add('show');
+        }
+      }
     });
 
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
